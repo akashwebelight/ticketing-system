@@ -13,16 +13,30 @@
     <main>
         <h2>Create a Ticket</h2>
         <form id="ticketForm">
-            <input type="text" id="ticketTitle" placeholder="Ticket Title" required>
-            <textarea id="ticketDescription" placeholder="Ticket Description" required></textarea>
-            <select id="ticketPriority">
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-            </select>
+            <div>
+                <label for="ticketTitle">Ticket Title</label>
+                <input type="text" id="ticketTitle" placeholder="Ticket Title" required>
+            </div>
+            <div>
+                <label for="ticketDescription">Ticket Description</label>
+                <textarea id="ticketDescription" placeholder="Ticket Description" required></textarea>
+            </div>
+            <div>
+                <label for="ticketPriority">Priority</label>
+                <select id="ticketPriority" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
             <button type="submit">Submit Ticket</button>
         </form>
+
+        <!-- Success/Error message -->
+        <div id="message" style="display: none;"></div>
     </main>
+
+    <script src="firebase-config.js"></script> <!-- Firebase config -->
     <script src="script.js"></script>
 </body>
 </html>
